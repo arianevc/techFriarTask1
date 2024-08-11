@@ -90,3 +90,39 @@ document.getElementById('course').addEventListener('change', function() {
         selectedTable.style.display = 'block';
     }
 });
+// Script to handle course and semester selection and display the corresponding timetable
+document.addEventListener('DOMContentLoaded', function() {
+    const courseSelect = document.getElementById('course-select');
+    const semesterSelect = document.getElementById('semester-select');
+
+    function displayTimetable(course, semester) {
+        // Hide all tables
+        const allTables = document.querySelectorAll('.timetable');
+        allTables.forEach(table => table.style.display = 'none');
+
+        // Construct the ID of the table to show
+        const tableId = `${course}-${semester}`;
+        const selectedTable = document.getElementById(tableId);
+
+        // Show the selected table if it exists
+        if (selectedTable) {
+            selectedTable.style.display = 'table';
+        }
+    }
+
+    courseSelect.addEventListener('change', function() {
+        const course = courseSelect.value;
+        const semester = semesterSelect.value;
+        if (course && semester) {
+            displayTimetable(course, semester);
+        }
+    });
+
+    semesterSelect.addEventListener('change', function() {
+        const course = courseSelect.value;
+        const semester = semesterSelect.value;
+        if (course && semester) {
+            displayTimetable(course, semester);
+        }
+    });
+});

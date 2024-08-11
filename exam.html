@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Examination - Destini College</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="examination">
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="destini logo.png" alt="canva logo"></a>
+            </div>
+            <nav class="nav-menu">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="course.html">Courses</a>
+                    <a href="exam.html">Examination</a>
+                    <a href="faculty.html">Faculty</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="enquiry.html">Support</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <div class="mobile-menu" id="mobile-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                    <li><a href="exam.html">Examination</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="enquiry.html">Support</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="content">
+            <h2>Examination Timetable</h2>
+
+            <div class="select-container">
+                <label for="course-select">Select Course:</label>
+                <select id="course-select">
+                    <option value="">--Select Course--</option>
+                    <option value="btech">B.Tech</option>
+                    <option value="bcom">B.Com</option>
+                    <option value="bsc">B.Sc</option>
+                    <option value="ba">B.A</option>
+                </select>
+            </div>
+
+            <div class="select-container">
+                <label for="semester-select">Select Semester:</label>
+                <select id="semester-select">
+                    <option value="">--Select Semester--</option>
+                    <option value="sem1">Semester 1</option>
+                    <option value="sem2">Semester 2</option>
+                    <option value="sem3">Semester 3</option>
+                    <option value="sem4">Semester 4</option>
+                    <option value="sem5">Semester 5</option>
+                    <option value="sem6">Semester 6</option>
+                </select>
+            </div>
+
+            <div id="timetable-container">
+               
+                <table id="btech-sem1" class="timetable" style="display:none;">
+                    <tr><th>Subject</th><th>Date</th><th>Time</th></tr>
+                    <tr><td>Mathematics I</td><td>2024-08-15</td><td>10:00 AM - 1:00 PM</td></tr>
+                    <tr><td>Physics</td><td>2024-08-17</td><td>10:00 AM - 1:00 PM</td></tr>
+                    <tr><td>Chemistry</td><td>2024-08-20</td><td>10:00 AM - 1:00 PM</td></tr>
+                </table>
+
+                <!-- B.Tech Semester 2 -->
+                <table id="btech-sem2" class="timetable" style="display:none;">
+                    <tr><th>Subject</th><th>Date</th><th>Time</th></tr>
+                    <tr><td>Mathematics II</td><td>2024-12-01</td><td>10:00 AM - 1:00 PM</td></tr>
+                    <tr><td>Electronics</td><td>2024-12-03</td><td>10:00 AM - 1:00 PM</td></tr>
+                    <tr><td>Mechanics</td><td>2024-12-06</td><td>10:00 AM - 1:00 PM</td></tr>
+                </table>
+
+        
+                <table id="bcom-sem1" class="timetable" style="display:none;">
+                    <tr><th>Subject</th><th>Date</th><th>Time</th></tr>
+                    <tr><td>Accounting</td><td>2024-08-18</td><td>10:00 AM - 1:00 PM</td></tr>
+                    <tr><td>Economics</td><td>2024-08-21</td><td>10:00 AM - 1:00 PM</td></tr>
+                    <tr><td>Business Studies</td><td>2024-08-23</td><td>10:00 AM - 1:00 PM</td></tr>
+                </table>
+
+                <!-- B.Com Semester 2 -->
+                <table id="bcom-sem2" class="timetable" style="display:none;">
+                    <tr><th>Subject</th><th>Date</th><th>Time</th></tr>
+                    <tr><td>Corporate Accounting</td><td>2024-12-05</td><td>10:00 AM - 1:00 PM</td></tr>
+                    <tr><td>Business Law</td><td>2024-12-07</td><td>10:00 AM - 1:00 PM</td></tr>
+                    <tr><td>Marketing</td><td>2024-12-10</td><td>10:00 AM - 1:00 PM</td></tr>
+                </table>
+
+                <!-- Add more tables for other courses and semesters -->
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/arianevincentc?igsh=M2J2eHprZDNmdzZm" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ariane-vincent-c-63467a297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 Destini. All rights reserved. Developed by Ariane Vincent C-Techfriar</p>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const courseSelect = document.getElementById('course-select');
+        const semesterSelect = document.getElementById('semester-select');
+    
+        function displayTimetable(course, semester) {
+            // Tables are made hidden
+            const allTables = document.querySelectorAll('.timetable');
+            allTables.forEach(table => table.style.display = 'none');
+    
+            // Construct the ID of the table to show
+            const tableId = `${course}-${semester}`;
+            const selectedTable = document.getElementById(tableId);
+    
+            // Show the selected table if it exists
+            if (selectedTable) {
+                selectedTable.style.display = 'table';
+            }
+        }
+    
+        courseSelect.addEventListener('change', function() {
+            const course = courseSelect.value;
+            const semester = semesterSelect.value;
+            if (course && semester) {
+                displayTimetable(course, semester);
+            }
+        });
+    
+        semesterSelect.addEventListener('change', function() {
+            const course = courseSelect.value;
+            const semester = semesterSelect.value;
+            if (course && semester) {
+                displayTimetable(course, semester);
+            }
+        });
+    });
+    </script>
+</body>
+</html>
