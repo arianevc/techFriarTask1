@@ -125,7 +125,7 @@
             const allTables = document.querySelectorAll('.timetable');
             allTables.forEach(table => table.style.display = 'none');
     
-            // Construct the ID of the table to show
+            // Constructing the ID of the table to show
             const tableId = `${course}-${semester}`;
             const selectedTable = document.getElementById(tableId);
     
@@ -134,7 +134,7 @@
                 selectedTable.style.display = 'table';
             }
         }
-    
+    //Display the timetable based on the id provided
         courseSelect.addEventListener('change', function() {
             const course = courseSelect.value;
             const semester = semesterSelect.value;
@@ -150,6 +150,13 @@
                 displayTimetable(course, semester);
             }
         });
+        // Hamburger menu function
+        const hamburger=document.getElementById('hamburger');
+    const mobileMenu=document.getElementById('mobile-menu');
+    
+hamburger.addEventListener('click',function(){
+    mobileMenu.classList.toggle('active')
+});
     });
     </script>
 </body>

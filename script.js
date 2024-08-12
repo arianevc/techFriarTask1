@@ -1,3 +1,10 @@
+  // Hamburger menu function
+ const hamburger=document.getElementById('hamburger');
+    const mobileMenu=document.getElementById('mobile-menu');
+    
+hamburger.addEventListener('click',function(){
+    mobileMenu.classList.toggle('active')
+});
 document.addEventListener('DOMContentLoaded',function(){
     const hamburger=document.getElementById('hamburger');
     const mobileMenu=document.getElementById('mobile-menu');
@@ -11,7 +18,8 @@ const okBtn = document.getElementById('ok');
 let formSubmit=false;
 popup.style.display = 'none';
 form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
+   // Prevent the default form submission
+    event.preventDefault(); 
     
     popup.style.display = 'block';
     // Get the form and its elements
@@ -65,11 +73,11 @@ form.addEventListener('submit', function (event) {
       return phoneRegex.test(phone);
     }
 });
-
+//Form submission popup
 okBtn.addEventListener('click', function () {
     popup.style.display = 'none';
 });
-
+//how popup works when clicked on submit or on window
 window.addEventListener('click', function (event) {
     if (event.target == form || event.target == okBtn || !popup.contains(event.target)) {
         popup.style.display = 'none';
@@ -78,6 +86,7 @@ window.addEventListener('click', function (event) {
 
 
 });
+//Function for displaying the course details
 document.getElementById('course').addEventListener('change', function() {
     // Hide all tables
     document.querySelectorAll('.crstable').forEach(function(table) {
@@ -109,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             selectedTable.style.display = 'table';
         }
     }
-
+//Examination details selected based on course and semesters
     courseSelect.addEventListener('change', function() {
         const course = courseSelect.value;
         const semester = semesterSelect.value;
